@@ -12,23 +12,23 @@ $ npm install --save global.css
 
 mainly includes:
 
-```bash
+```css
     normalize.scss
     
     reset.scss
     
-    // flex grid
+    /* flex grid */
     mixins/_grid.scss
     
-    // support change $pseudo on params
+    /* support change $pseudo on params */
     mixins/_border.scss (1px hack)
     
-    // NOTE: if you use "autoprefixer", 
-    // you should set remove: false option, or set Safari 6 on .browserslistrc, 
-    // for multi-line's ellipsis take effect
+    /* NOTE: if you use "autoprefixer", 
+       you should set remove: false option, or set Safari 6 on .browserslistrc, 
+       for multi-line's ellipsis take effect */
     mixins/_ellipsis.scss
     
-    // support change $pseudo on params
+    /* support change $pseudo on params */
     mixins/_ripple.scss
 ```
 
@@ -39,75 +39,75 @@ After installed in node_modules, you can use it free.eg.
 
 #### 1. Import all
 
-```bash
+```css
     @import '~global.css/global';
 ```
 
 #### 2. Import partials as you like:
 
-```bash
+```css
     @import '~global.css/src/normalize';
 ```
 
-```bash
+```css
     @import '~global.css/src/reset';
 ```
 
-```bash
+```css
     @import '~global.css/src/grid';
 ```
 
-```bash
+```css
     @import '~global.css/src/border';
 ```
 
-```bash
+```css
     @import '~global.css/src/ellipsis';
 ```
 
-```bash
+```css
     @import '~global.css/src/ripple';
 ```
 
 #### 3. Import mixins as you like:
 
-```bash
+```css
     @import '~global.css/src/mixins/grid';
     @import '~global.css/src/mixins/border';
     @import '~global.css/src/mixins/ellipsis';
     @import '~global.css/src/mixins/ripple';
 ```
 
-```bash
+```css
     @import '~global.css/src/mixins/grid';
 ```
 
-```bash
+```css
     @import '~global.css/src/mixins/border';
 ```
 
-```bash
+```css
     @import '~global.css/src/mixins/ellipsis';
 ```
 
-```bash
+```css
     @import '~global.css/src/mixins/ripple';
 ```
 #### 4. Import css files as you like:
 
-```bash
+```css
     @import '~global.css/dist/global.css';
-    or min file
+    /* or min file */
     @import '~global.css/dist/global.min.css';
 ```
 And others:
 
-```bash
+```css
     @import '~global.css/dist/grid.css';
     @import '~global.css/dist/border.css';
     @import '~global.css/dist/ellipsis.css';
     @import '~global.css/dist/ripple.css';
-    or min files
+    /* or min files */
     @import '~global.css/dist/grid.min.css';
     @import '~global.css/dist/border.min.css';
     @import '~global.css/dist/ellipsis.min.css';
