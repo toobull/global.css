@@ -3,8 +3,9 @@
   "version": "1.0.12",
   "description": "global.css based on sass, includes normalize, reset, grid, 1px border, ellipsis, ripple.",
   "main": "./global.scss",
+  "repository": "toobull/global.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp"
   },
   "keywords": [
     "global.css",

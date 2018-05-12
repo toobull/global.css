@@ -37,13 +37,13 @@ mainly includes:
 After installed in node_modules, you can use it free.eg.
 (Detail Document come soon.)
 
-####1. Import all
+#### 1. Import all
 
 ```bash
     @import '~global.css/global';
 ```
 
-####2. Import partials as you like:
+#### 2. Import partials as you like:
 
 ```bash
     @import '~global.css/src/normalize';
@@ -69,7 +69,7 @@ After installed in node_modules, you can use it free.eg.
     @import '~global.css/src/ripple';
 ```
 
-####3. Import mixins as you like:
+#### 3. Import mixins as you like:
 
 ```bash
     @import '~global.css/src/mixins/grid';
@@ -93,7 +93,7 @@ After installed in node_modules, you can use it free.eg.
 ```bash
     @import '~global.css/src/mixins/ripple';
 ```
-####4. Import css files as you like:
+#### 4. Import css files as you like:
 
 ```bash
     @import '~global.css/dist/global.css';
