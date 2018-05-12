@@ -1,0 +1,55 @@
+// =======================================
+// _grid.scss
+// =======================================
+@import './mixins/grid';
+@import 'var';
+
+// grid
+.grid{
+  @include grid($flex-flow: row wrap);
+
+  &.gutter{
+    @include grid($gutter: $__GridGutter);
+  }
+
+  .col{
+    @include grid-col($condensed: $__GridCondensed);
+  }
+
+  @for $_i from 1 through $__GridColumns {
+    > .col-#{$_i} {
+      @include grid-col($col: $_i, $condensed: $__GridCondensed);
+    }
+  }
+
+  @for $_i from 1 through $__GridColumns {
+    &.gutter > .col-#{$_i} {
+      @include grid-col($col: $_i, $gutter: $__GridGutter, $condensed: $__GridCondensed);
+    }
+  }
+}
+
+// single line grid
+.row{
+  @include grid($flex-flow: row wrap);
+
+  &.gutter{
+    @include grid($gutter: $__GridGutter);
+  }
+
+  .col{
+    @include grid-col($condensed: $__GridCondensed);
+  }
+
+  @for $_i from 1 through $__GridColumns {
+    > .col-#{$_i} {
+      @include grid-col($col: $_i, $condensed: $__GridCondensed);
+    }
+  }
+
+  @for $_i from 1 through $__GridColumns {
+    &.gutter > .col-#{$_i} {
+      @include grid-col($col: $_i, $gutter: $__GridGutter, $condensed: $__GridCondensed);
+    }
+  }
+}

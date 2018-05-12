@@ -1,0 +1,26 @@
+@import 'mixins/border';
+
+.border{
+  @include border();
+}
+.border-radius{
+  @include border-radius();
+}
+.border-top{
+  @include border-top();
+}
+.border-bottom{
+  @include border-bottom();
+}
+.border-left{
+  @include border-left();
+}
+.border-right{
+  @include border-right();
+}
+.border-vertical{
+  @include border-vertical();
+}
+.border-horizontal{
+  @include border-horizontal();
+}

@@ -1,0 +1,10 @@
+@import 'mixins/ellipsis';
+
+.ellipsis-single{
+  @include ellipsis(1);
+}
+
+// default line is 2，change line for use property `-webkit-line-clamp`
+.ellipsis-multi{
+  @include ellipsis(2);
+}

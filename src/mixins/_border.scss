@@ -1,0 +1,298 @@
+// =======================================
+// mixins/_border.scss
+// =======================================
+
+// border
+@mixin border(
+  $width: 1px,
+  $style: solid,
+  $color: #dddddd,
+  $pseudo: ':after'
+) {
+  border: $width $style $color;
+
+  @if $style==solid {
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      position: relative;
+      border: 0;
+
+      @if $pseudo!=':after' {
+        $pseudo: ':before'
+      }
+      &#{$pseudo} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, $color)),
+        -webkit-gradient(linear, left top, right top, color-stop(0.5, transparent), color-stop(0.5, $color)),
+        -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, $color)),
+        -webkit-gradient(linear, right top, left top, color-stop(0.5, transparent), color-stop(0.5, $color));
+        -webkit-background-size: 100% $width, $width 100%, 100% $width, $width 100%;
+        background-size: 100% $width, $width 100%, 100% $width, $width 100%;
+        background-repeat: no-repeat;
+        background-position: top, right, bottom, left;
+        padding: $width;
+        box-sizing: border-box;
+        z-index: 10;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+//border and radius
+@mixin border-radius(
+  $width: 1px,
+  $style: solid,
+  $color: #dddddd,
+  $radius: 4px,
+  $pseudo: ':after'
+) {
+  border: $width $style $color;
+  border-radius: $radius;
+
+  @if $style==solid {
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      position: relative;
+      border: 0;
+
+      @if $pseudo!=':after' {
+        $pseudo: ':before'
+      }
+      &#{$pseudo} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 200%;
+        height: 200%;
+        border: $width $style $color;
+        -webkit-transform: scale(0.5);
+        -webkit-transform-origin: 0 0;
+        padding: $width;
+        box-sizing: border-box;
+        border-radius: $radius*2;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+//border top
+@mixin border-top(
+  $width: 1px,
+  $style: solid,
+  $color: #dddddd,
+  $pseudo: ':after'
+) {
+  border-top: $width $style $color;
+
+  @if $style==solid {
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      position: relative;
+      border-top: 0;
+
+      @if $pseudo!=':after' {
+        $pseudo: ':before'
+      }
+      &#{$pseudo} {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding-top: $width;
+        width: 100%;
+        background-position: left top;
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, $color));
+        background-repeat: no-repeat;
+        background-size: 100% $width;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+//border bottom
+@mixin border-bottom(
+  $width: 1px,
+  $style: solid,
+  $color: #dddddd,
+  $pseudo: ':after'
+) {
+  border-bottom: $width $style $color;
+
+  @if $style==solid {
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      position: relative;
+      border-bottom: 0;
+
+      @if $pseudo!=':after' {
+        $pseudo: ':before'
+      }
+      &#{$pseudo} {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        padding-top: $width;
+        width: 100%;
+        background-position: left bottom;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, $color));
+        background-repeat: no-repeat;
+        background-size: 100% $width;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+//border top & bottom
+@mixin border-vertical(
+  $width: 1px,
+  $style: solid,
+  $color: #dddddd,
+  $pseudo: ':after'
+) {
+  border-top: $width $style $color;
+  border-bottom: $width $style $color;
+
+  @if $style==solid {
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      position: relative;
+      border-top: 0;
+      border-bottom: 0;
+
+      @if $pseudo!=':after' {
+        $pseudo: ':before'
+      }
+      &#{$pseudo} {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background-position: top, bottom;
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, $color)),
+        -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, $color));
+        background-repeat: no-repeat;
+        background-size: 100% $width;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+//border left
+@mixin border-left(
+  $width: 1px,
+  $style: solid,
+  $color: #dddddd,
+  $pseudo: ':after'
+) {
+  border-left: $width $style $color;
+
+  @if $style==solid {
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      position: relative;
+      border-left: 0;
+
+      @if $pseudo!=':after' {
+        $pseudo: ':before'
+      }
+      &#{$pseudo} {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding-left: $width;
+        height: 100%;
+        background-position: left top;
+        background-image: -webkit-gradient(linear, right top, left top, color-stop(0.5, transparent), color-stop(0.5, $color));
+        background-repeat: no-repeat;
+        background-size: $width 100%;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+//border right
+@mixin border-right(
+  $width: 1px,
+  $style: solid,
+  $color: #dddddd,
+  $pseudo: ':after'
+) {
+  border-right: $width $style $color;
+
+  @if $style==solid {
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      position: relative;
+      border-right: 0;
+
+      @if $pseudo!=':after' {
+        $pseudo: ':before'
+      }
+      &#{$pseudo} {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        padding-left: $width;
+        height: 100%;
+        background-position: right top;
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.5, transparent), color-stop(0.5, $color));
+        background-repeat: no-repeat;
+        background-size: $width 100%;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+//border left & right
+@mixin border-horizontal(
+  $width: 1px,
+  $style: solid,
+  $color: #dddddd,
+  $pseudo: ':after'
+) {
+  border-left: $width $style $color;
+  border-right: $width $style $color;
+
+  @if $style==solid {
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      position: relative;
+      border-left: 0;
+      border-right: 0;
+
+      @if $pseudo!=':after' {
+        $pseudo: ':before'
+      }
+      &#{$pseudo} {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background-position: left, right;
+        background-image: -webkit-gradient(linear, right top, left top, color-stop(0.5, transparent), color-stop(0.5, $color)),
+        -webkit-gradient(linear, left top, right top, color-stop(0.5, transparent), color-stop(0.5, $color));
+        background-repeat: no-repeat;
+        background-size: $width 100%;
+        pointer-events: none;
+      }
+    }
+  }
+}

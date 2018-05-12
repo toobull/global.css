@@ -1,0 +1,33 @@
+{
+  "name": "global.css",
+  "version": "1.0.12",
+  "description": "global.css based on sass, includes normalize, reset, grid, 1px border, ellipsis, ripple.",
+  "main": "./global.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "global.css",
+    "scss",
+    "sass",
+    "css",
+    "normalize",
+    "reset",
+    "grid",
+    "border 1px hack",
+    "ellipsis",
+    "ripple"
+  ],
+  "author": "jser.org",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.4.1",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "stylefmt": "^6.0.0"
+  }
+}
