@@ -1,5 +1,6 @@
 // =======================================
 // mixins/_grid.scss
+// from https://github.com/thingsym/flexbox-grid-mixins (very cool)
 // =======================================
 
 // define grid
@@ -121,10 +122,12 @@
     } @else if $col-offset and unitless($col-offset) == false {
       $flex-basis: calc(#{$flex-basis} + #{$col-offset});
     }
+    width: $flex-basis;
   } @else if type-of($col) == number and unitless($col) == false {
     $flex-grow: 0;
     $flex-shrink: 0;
     $flex-basis: $col;
+    width: $flex-basis;
   } @else if type-of($col) == string and $col == 'auto' {
     $flex-grow: 1;
     $flex-shrink: 1;

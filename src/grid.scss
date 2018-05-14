@@ -13,43 +13,40 @@
   }
 
   .col{
-    @include grid-col($condensed: $__GridCondensed);
+    @include grid-col();
   }
 
   @for $_i from 1 through $__GridColumns {
     > .col-#{$_i} {
-      @include grid-col($col: $_i, $condensed: $__GridCondensed);
+      @include grid-col($col: $_i);
     }
-  }
-
-  @for $_i from 1 through $__GridColumns {
     &.gutter > .col-#{$_i} {
-      @include grid-col($col: $_i, $gutter: $__GridGutter, $condensed: $__GridCondensed);
+      @include grid-col($col: $_i, $gutter: $__GridGutter, $condensed: false);
+    }
+    &.gutter.condensed > .col-#{$_i} {
+      @include grid-col($col: $_i, $gutter: $__GridGutter, $condensed: true);
     }
   }
 }
 
-// single line grid
+// single line grid, only condensed mode
 .row{
-  @include grid($flex-flow: row wrap);
+  @include grid($flex-flow: row nowrap);
 
   &.gutter{
     @include grid($gutter: $__GridGutter);
   }
 
   .col{
-    @include grid-col($condensed: $__GridCondensed);
+    @include grid-col();
   }
 
   @for $_i from 1 through $__GridColumns {
     > .col-#{$_i} {
-      @include grid-col($col: $_i, $condensed: $__GridCondensed);
+      @include grid-col($col: $_i);
     }
-  }
-
-  @for $_i from 1 through $__GridColumns {
     &.gutter > .col-#{$_i} {
-      @include grid-col($col: $_i, $gutter: $__GridGutter, $condensed: $__GridCondensed);
+      @include grid-col($col: $_i, $gutter: $__GridGutter, $condensed: true);
     }
   }
 }
