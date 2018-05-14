@@ -1,6 +1,6 @@
 {
   "name": "global.css",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "global.css based on sass, includes normalize, reset, grid, 1px border, ellipsis, ripple.",
   "homepage": "https://global.css.jser.org",
   "main": "./global.scss",
