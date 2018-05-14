@@ -1,5 +1,7 @@
 ## global.css
 
+[global.css](https://global.css.jser.org/) based on sass, includes normalize, reset, grid, 1px border, ellipsis, ripple.
+
 ## Quick Start
 
 ### 1.Installation
@@ -35,7 +37,7 @@ mainly includes:
 ### 3.Usage
 
 After installed in node_modules, you can use it free.eg.
-(Detail Document come soon.)
+(-> [Detail Document](https://global.css.jser.org/).)
 
 #### 1. Import all
 
