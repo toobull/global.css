@@ -13,7 +13,7 @@
   }
 
   .col{
-    @include grid-col();
+    @include grid-col(100%);
   }
 
   @for $_i from 1 through $__GridColumns {
@@ -38,7 +38,7 @@
   }
 
   .col{
-    @include grid-col();
+    @include grid-col(100%);
   }
 
   @for $_i from 1 through $__GridColumns {

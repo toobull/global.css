@@ -13,8 +13,9 @@
 }
 
 .grid .col {
+  width: 100%;
   -webkit-box-flex: 0;
-  flex: 0 1 auto;
+  flex: 0 0 100%;
 }
 
 .grid > .col-1 {
@@ -512,8 +513,9 @@
 }
 
 .row .col {
+  width: 100%;
   -webkit-box-flex: 0;
-  flex: 0 1 auto;
+  flex: 0 0 100%;
 }
 
 .row > .col-1 {
