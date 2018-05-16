@@ -37,7 +37,7 @@ mainly includes:
 ### 3.Usage
 
 After installed in node_modules, you can use it free.eg.
-(-> [Detail Document](https://global.css.jser.org/).)
+(-> [Detail Document](https://global.css.jser.org/)[[Document Store](https://github.com/toobull/global.css-docs)].)
 
 #### 1. Import all
 
