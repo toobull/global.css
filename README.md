@@ -115,3 +115,5 @@ And others:
     @import '~global.css/dist/ellipsis.min.css';
     @import '~global.css/dist/ripple.min.css';
 ```
+
+#### 5. Add `app` directory, include four files `_var.scss` `_mixins.scss` `_functions.scss` `main.scss` as reflections for the application, which files in `src/assets/scss`. `src` directory on the same level with `node_modules`. 
