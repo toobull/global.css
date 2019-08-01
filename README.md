@@ -1,6 +1,9 @@
 ## global.css
 
-[global.css](https://global.css.jser.org/) based on sass, includes normalize, reset, grid, 1px border, ellipsis, ripple.
+[global.css](https://global.css.jser.org/) based on **sass**, includes **`normalize`**, **`reset`**, **`grid`**, **`1px border`**, **`ellipsis`**, **`ripple`**, **`elevation(box-shadow)`**.
+
+### 0.TODO List
+* support **`stylus`**
 
 ## Quick Start
 
@@ -32,6 +35,9 @@ mainly includes:
     
     /* support change $pseudo on params */
     mixins/_ripple.scss
+    
+    /* use box-shadow, raise elements elevation in vision. (not z-index) */
+    mixins/_elevation.scss
 ```
 
 ### 3.Usage
@@ -48,10 +54,8 @@ After installed in node_modules, you can use it free.eg.
 #### 2. Import partials as you like:
 
 ```css
+    /* just use normalize&reset */
     @import '~global.css/src/normalize';
-```
-
-```css
     @import '~global.css/src/reset';
 ```
 
@@ -78,6 +82,7 @@ After installed in node_modules, you can use it free.eg.
     @import '~global.css/src/mixins/border';
     @import '~global.css/src/mixins/ellipsis';
     @import '~global.css/src/mixins/ripple';
+    @import '~global.css/src/mixins/elevation';
 ```
 
 ```css
@@ -109,11 +114,27 @@ And others:
     @import '~global.css/dist/border.css';
     @import '~global.css/dist/ellipsis.css';
     @import '~global.css/dist/ripple.css';
+    @import '~global.css/dist/elevation.css';
     /* or min files */
     @import '~global.css/dist/grid.min.css';
     @import '~global.css/dist/border.min.css';
     @import '~global.css/dist/ellipsis.min.css';
     @import '~global.css/dist/ripple.min.css';
+    @import '~global.css/dist/elevation.min.css';
 ```
 
-#### 5. Add `app` directory, include four files `_var.scss` `_mixins.scss` `_functions.scss` `main.scss` as reflections for the application, which files in `src/assets/scss`. `src` directory on the same level with `node_modules`. 
+#### 5. Add `app` directory, include four files `_var.scss` `_mixins.scss` `_functions.scss` `main.scss` as reflections for the application, which files in `src/assets/scss`. `src` directory on the same level with `node_modules`.
+
+#### 6. Version
+
+v1.1.0
+* add **`elevation(box-shadow)`**
+
+v1.0.x
+* init project
+* add **`normalize`** 
+* add **`reset`** 
+* add **`grid`** 
+* add **`1px border`** 
+* add **`ellipsis`** 
+* add **`ripple`**

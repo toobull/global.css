@@ -1,0 +1,12 @@
+@import 'var';
+@import 'mixins/elevation';
+
+@for $_i from 1 through $__ElevationLevel {
+  .elevation-#{$_i} {
+    @include elevation($z: $_i);
+  }
+}
+
+.elevation-transition {
+  @include elevation-transition();
+}

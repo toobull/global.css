@@ -1,0 +1,28 @@
+@import "../var";
+
+@mixin elevation(
+    $z:0,
+    $important: false,
+    $transition: false,
+    $duration: 280ms,
+    $easing: cubic-bezier(.4, 0, .2, 1)
+) {
+    $z: $z + 1;
+    $box-shadow: nth($__ElevationShadowKeyUmbra, $z), nth($__ElevationShadowKeyPenumbra, $z), nth($__ElevationShadowKeyAmbient, $z);
+
+    @if $important {
+        $box-shadow: $box-shadow !important;
+    }
+    box-shadow: $box-shadow;
+    @if $transition {
+        @include elevation-transition($duration: $duration, $easing: $easing);
+    }
+}
+
+@mixin elevation-transition(
+    $duration: 280ms,
+    $easing: cubic-bezier(.4, 0, .2, 1)
+) {
+    transition: box-shadow $duration $easing;
+    will-change: box-shadow;
+}
